@@ -12,6 +12,7 @@ union ItemData {
   struct {
     int damage;
     int uses_left;
+    int crit_chances;
   } weapon;
   struct {
     int health_delta;
@@ -21,7 +22,7 @@ union ItemData {
 struct Item {
   char name[21];
   char description[81];
-  char *drawable;
+  char drawable[81];
   enum ItemType type;
   union ItemData data;
 };

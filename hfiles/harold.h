@@ -5,7 +5,7 @@
 
 void harold_clear_inventory(void);
 
-void harold_load_inventry(void);
+void harold_load_inventory(void);
 
 void harold_save_inventory(void);
 
