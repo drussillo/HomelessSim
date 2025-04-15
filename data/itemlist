@@ -22,3 +22,12 @@ test3.type = WEAPON;
 test3.data.weapon.damage = 13;
 test3.data.weapon.uses_left = 20;
 test3.data.weapon.crit_chances = 15;
+
+struct Item test4;
+strcpy(test3.name, "Fent");
+strcpy(test3.description, "Bag of magical fentanyl powder. Causes OD as soon as you throw it on someone.");
+strcpy(test3.drawable, "drawables/fentbag1.png");
+test3.type = WEAPON;
+test3.data.weapon.damage = 999999;
+test3.data.weapon.uses_left = 1;
+test3.data.weapon.crit_chances = 0;
