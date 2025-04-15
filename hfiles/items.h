@@ -21,7 +21,7 @@ union ItemData {
 struct Item {
   char name[21];
   char description[81];
-  void *drawable;
+  char *drawable;
   enum ItemType type;
   union ItemData data;
 };
