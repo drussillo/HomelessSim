@@ -29,7 +29,7 @@ void harold_add_inventory(struct Item new_item) {
 
 
 void harold_load_inventory(void) {
-  FILE *inventorybin= fopen("data/inventory.bin", "rb");
+  FILE *inventorybin= fopen("data/harold.inventory.bin", "rb");
 
   fread(inventory, sizeof(struct Item), INVENTORY_SIZE, inventorybin);
 
@@ -38,7 +38,7 @@ void harold_load_inventory(void) {
 
 
 void harold_save_inventory(void) {
-  FILE *inventorybin = fopen("data/inventory.bin", "wb");
+  FILE *inventorybin = fopen("data/harold.inventory.bin", "wb");
   fwrite(inventory, sizeof(struct Item), INVENTORY_SIZE, inventorybin);
   fclose(inventorybin);
 }

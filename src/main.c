@@ -7,7 +7,14 @@
 
 
 int main(void) {
-  item_print_item(item_get_item_from_bin(WEAPON, 3));
+  // harold_clear_inventory();
+  // harold_add_inventory(item_get_item_from_bin(WEAPON, 1));
+  // harold_add_inventory(item_get_item_from_bin(WEAPON, 0));
+  // harold_add_inventory(item_get_item_from_bin(WEAPON, 1));
+  // harold_add_inventory(item_get_item_from_bin(WEAPON, 1));
+  // harold_load_inventory();
+  // harold_print_inventory();
+  // harold_save_inventory();
 
   // InitWindow(DisplayWidth, DisplayHeight, "Homeless Simulator: Harold's Adventure");
   // SetTargetFPS(FPS);
