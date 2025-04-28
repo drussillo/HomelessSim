@@ -51,7 +51,7 @@ void mkchunks_testscene(void) {
   chunk0.objects = malloc(sizeof(struct Object) * chunk0.object_amount);
   chunk0.objects[0] = (struct Object){
     .type = ITEM,
-    .subtype = WEAPON,
+    .subtype.item = WEAPON,
     .id = 1,  // broken bottle
     .data.item = NULL,
     .draw = true,
@@ -60,7 +60,7 @@ void mkchunks_testscene(void) {
   };
   chunk0.objects[1] = (struct Object){
     .type = ITEM,
-    .subtype = WEAPON,
+    .subtype.item = WEAPON,
     .id = 0,  // Dirty needle
     .data.item = NULL,
     .draw = true,
@@ -69,12 +69,14 @@ void mkchunks_testscene(void) {
   };
 
   FILE *chunks_testscene_bin = fopen("../data/chunks.testscene.bin", "wb");
+  fwrite(&chunk0, sizeof(struct Chunk), 1, chunks_testscene_bin);
+  fwrite(chunk0.objects, sizeof(struct Object), chunk0.object_amount, chunks_testscene_bin);
   fclose(chunks_testscene_bin);
 }
 
 
 int main(void) {
-  mkweapons();
+  // mkweapons();
   // mkchunks_testscene();
 
   return 0;

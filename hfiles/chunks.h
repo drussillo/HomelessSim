@@ -1,9 +1,9 @@
 #ifndef CHUNKS_H
 #define CHUNKS_H
 
+#include <stdbool.h>
 #include "objects.h"
 #include "items.h"
-
 
 struct Chunk {
   int chunkid;  // functions like an index

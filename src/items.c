@@ -13,7 +13,7 @@ struct Item item_get_item_from_bin(enum ItemType type, int id) {
   // check each id; fseek back to top of each struct; use binary search;
   FILE *itembin;
   if(type == WEAPON) itembin = fopen("./data/items.weapons.bin", "rb");
-  if(type == HEALING) itembin = fopen("../data/items.healing.bin", "rb");
+  if(type == HEALING) itembin = fopen("./data/items.healing.bin", "rb");
   // TODO!! ADD NEW FILES ^
 
   struct Item result;

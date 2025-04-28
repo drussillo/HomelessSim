@@ -11,8 +11,16 @@ enum ObjectType {
   ITEM,
   NPC,
   SPRITE,
-  CHUNKPTR,
+  CHUNKID,
   FLAG
+};
+
+union ObjectSubtype {
+  void *none;
+  enum ItemType item;
+  // enum NPCType npc;
+  // enum SpriteType sprite;
+  // ...
 };
 
 union ObjectData {
@@ -25,12 +33,16 @@ union ObjectData {
 
 struct Object {
   enum ObjectType type;
-  enum ItemType subtype;
+  union ObjectSubtype subtype;
   int id;
   union ObjectData data;
   bool draw;
   int posx;
   int posy;
 };
+
+void object_load_data(struct Object object);
+
+void object_unload_data(struct Object object);
 
 #endif // !OBJECTS_H
